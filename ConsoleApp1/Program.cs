@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace ConsoleApp1
 {
@@ -8,7 +8,10 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Enter number :");
             string number = Console.ReadLine();
-            Console.WriteLine("You entered :" + number);
+            if (double.TryParse(number, out double num))
+            {
+                Console.WriteLine("You entered :" + num);
+            }
         }
     }
 }
